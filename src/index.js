@@ -12,9 +12,9 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 import {BrowserRouter as Router} from 'react-router-dom'
 
 
-const store = createStore(reducer, composeWithDevtools(applyMiddleware(thunk)))
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)))
 
-ReactDOM.render(
+ReactDOM.render( 
 <Provider store={store}>
   <App />
 </Provider>,
