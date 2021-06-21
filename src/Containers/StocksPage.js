@@ -1,4 +1,8 @@
-import {Component} from 'react' 
+
+import stocksForm from '../Components/StocksForm'
+import StocksList from '../Components/StocksList'
+import React,{Component} from 'react' 
+
 
 class StockPage extends Component {
 
@@ -6,6 +10,7 @@ class StockPage extends Component {
         return(
             <div>
                 Stocks Page
+                <StocksForm/>
                 <StocksList/>
             </div>
         )
