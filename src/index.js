@@ -6,13 +6,15 @@ import App from './App';
 
 
 import {createStore, applyMiddleware} from 'redux'
-import thunk from 'thunk'
+import thunk from 'redux-thunk'
 import {Provider} from 'react-redux'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import {BrowserRouter as Router} from 'react-router-dom'
 
+import stocksReducer from './Reducers/stocksReducer'
 
-const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)))
+
+const store = createStore(stocksReducer, composeWithDevTools(applyMiddleware(thunk)))
 
 ReactDOM.render( 
 <Provider store={store}>

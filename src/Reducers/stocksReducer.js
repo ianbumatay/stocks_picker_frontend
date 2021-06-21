@@ -1,5 +1,5 @@
 
-export const stocksReducer = (state = {stocks: []} ) => { 
+export default function stocksReducer (state = {stocks: []} ){ 
 
     return state
 
