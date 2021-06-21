@@ -1,5 +1,5 @@
 
-import stocksForm from '../Components/StocksForm'
+import StocksForm from '../Components/StocksForm'
 import StocksList from '../Components/StocksList'
 import React,{Component} from 'react' 
 
