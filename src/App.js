@@ -1,6 +1,6 @@
 
 import './App.css';
-import StockPage from './Containers/StockPage'
+import StocksPage from './Containers/StocksPage'
 import {Component} from 'react';
 
 class App extends Component {  
@@ -16,7 +16,7 @@ class App extends Component {
   render(){
     return(
       <div className="App">
-          <StockPage/>
+          <StocksPage/>
       </div>
     )
   }

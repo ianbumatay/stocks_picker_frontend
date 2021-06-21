@@ -6,6 +6,7 @@ class StockPage extends Component {
         return(
             <div>
                 Stocks Page
+                <StocksList/>
             </div>
         )
     }
