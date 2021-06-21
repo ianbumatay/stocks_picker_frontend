@@ -1,6 +1,6 @@
 import { bindActionCreators } from "redux";
 
-export default function stocksReducer (state = {stocks: []} ){ 
+export default function stocksReducer (state = {stocks: []}, action ){ 
 
     switch(action.type){ 
 
