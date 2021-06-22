@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 class StocksForm extends Component {
 
-    state = { name: '', symbol: '', price: '' } 
+    state = { symbol: '', name: '', price: '' } 
 
     handleChange = (event) => {
         this.setState({
