@@ -12,7 +12,7 @@ export function addStocks(stock){
         }
         fetch('http://localhost:3000/api/v1/stocks', options) 
         .then( resp => resp.json())
-        .them( stock => dispatch({type: "ADD_STOCKS", payload: stock}))
+        .then( stock => dispatch({type: "ADD_STOCKS", payload: stock}))
 
     }
 

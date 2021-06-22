@@ -1,3 +1,6 @@
+
+import {connect} from 'react-redux'
+import {addStocks} from '../Actions/addStocks'
 import React, {Component} from 'react' 
 
 class StocksForm extends Component {
@@ -8,6 +11,12 @@ class StocksForm extends Component {
         this.setState({
             [event.target.name]: event.target.value
         })
+    } 
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.props.addStocks(this.state)
+    
     }
 
 
@@ -15,10 +24,11 @@ class StocksForm extends Component {
     render(){
         return(
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Symbol" name="symbol" value={this.state.symbol} onChange={this.handleChange}/>
                     <input type="text" placeholder="Name" name="name" value={this.state.name} onChange={this.handleChange}/> 
-                    <input type="text" placeholder="price" name="price" value={this.state.price} onChange={this.handleChange}/>
+                    <input type="text" placeholder="price" name="price" value={this.state.price} onChange={this.handleChange}/> 
+                    <input type="submit"/>
                 </form>
             </div>
         )
@@ -26,4 +36,4 @@ class StocksForm extends Component {
 
 } 
 
-export default StocksForm;
+export default connect(null, {addStocks})(StocksForm);
