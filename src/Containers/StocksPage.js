@@ -1,4 +1,5 @@
 
+import {Route, Switch} from 'react-router-dom'
 import {connect} from 'react-redux'
 import { fetchStocks } from '../Actions/fetchStocks'
 import StocksForm from '../Components/StocksForm'
@@ -16,9 +17,13 @@ class StockPage extends Component {
     render(){
         return(
             <div>
-                Stocks Page
-                <StocksForm/>
-                <StocksList stocks={this.props.stocks}/>
+                <Route exact path='/stocks/new' component={StocksForm} />
+                <Route exact path='/stocks'>
+                   <StocksList stocks={this.props.stocks}/>
+                </Route>
+               
+                
+               
             </div>
         )
     }
