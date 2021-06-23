@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const StocksList = (props) => {
     console.log(props)
@@ -7,8 +7,8 @@ const StocksList = (props) => {
     return(
        <div>
            {props.stocks.map( (stock) => 
-              <div> 
-                 <Link to="`/stocks/${stock.id}`"> {stock.symbol} - {stock.name} - {stock.price} </Link>
+              <div key={stock.id}> 
+                 <Link to={`/stocks/${stock.id} `} > {stock.symbol} - {stock.name} - {stock.price} </Link>
               </div> 
             )} 
        </div>

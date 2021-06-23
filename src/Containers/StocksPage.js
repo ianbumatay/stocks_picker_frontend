@@ -19,14 +19,16 @@ class StockPage extends Component {
     render(){
         return(
             <div>
-                <Home/>
-                <Route exact path='/stocks/new' component={StocksForm} />
-                <Route exact path='/stocks'>
-                   <StocksList stocks={this.props.stocks}/>
-                </Route>
-                <Route path="/stocks/:id" render={( (routerProps) => 
-                   <Stock stock={this.props.stocks.find( stock => stock.id === parseInt(routerProps.match.params.id) )} /> )}
-                />
+                 <Home/>
+                <Switch>
+                    <Route exact path='/stocks/new' component={StocksForm} />
+                    <Route exact path="/stocks/:id" render={( (routerProps) => 
+                        <Stock stock={this.props.stocks.find( stock => stock.id === parseInt(routerProps.match.params.id) )} /> )}
+                    /> 
+                     <Route exact path='/stocks'>
+                        <StocksList stocks={this.props.stocks}/>
+                    </Route>
+                </Switch>
             </div>
         )
     }
