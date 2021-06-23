@@ -16,7 +16,8 @@ class StocksForm extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addStocks(this.state)
-    
+        this.setState({symbol: '', name: '', price: ''  })
+        this.props.history.push('/stocks')
     }
 
 

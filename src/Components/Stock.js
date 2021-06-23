@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {deleteStocks} from '../Actions/deleteStocks'
 import { withRouter } from 'react-router'
-//import Delete from './Delete'
+
 
 const Stock = (props) => { 
 
@@ -18,7 +18,7 @@ const Stock = (props) => {
                 <h1>{props.stock ? props.stock.symbol : null }</h1> 
                 <h4>{props.stock ? props.stock.name : null }</h4> 
                 <p>{props.stock ? props.stock.price : null }</p>
-                <button onClick={handledelete}>Delete</button>
+                <button onClick={handledelete}>Delete</button> 
             </div> 
         </div>
     )
