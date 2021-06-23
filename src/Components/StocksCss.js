@@ -10,16 +10,16 @@ const StocksCss = ({id, name, symbol, price}) => {
     return (
         <div className="stocks-container"> 
             <div className="stocks-row">
-                <div>
-                    {/* <h1 className="stocks-name">{name}</h1> */}
-                    <Link to={`/stocks/${id}`}> {name}</Link> 
+                <div className="stocks-name">
+                    <Link to={`/stocks/${id}`}> <h1>{name}</h1></Link> 
                 </div>
                 
                 <div className="stocks-data">
                     <div className="stocks-symbol">{symbol}</div>
-                    <div className="stocks-price">{price}</div>
-
+                    <div className="stocks-price">Price: {price}</div>
                 </div>
+
+               
                 
             </div>
             

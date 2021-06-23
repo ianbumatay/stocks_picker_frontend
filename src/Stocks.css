@@ -12,9 +12,9 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    height: 80px;
+    height: 50px;
     border-bottom: 1px solid #d7d7d7;
-    width: 900px;
+    width: 500px;
   
   }
   
@@ -23,26 +23,31 @@
     align-items: center;
     padding-right: 24px;
   
-    min-width: 100px;
+    min-width: 50px;
   
   } 
 
-  .stocks h1 {
+  /* .stocks h1 {
     font-size: 16px;
-    width: 150px;
-  }
+    width: 100px;
+  } */
   
   .stocks-data{
       display: flex;
-      text-align: right;
+      text-align: center;
       justify-content: space-between;
       width: 100%;
   }
   
   .stock-symbol{
     width: 100px;
-  }
+  } 
   
-  .stock-prive{
-    width: 100px;
-  }
+  .stock-price{
+    width: 155px;
+  } 
+
+ 
+
+
+ 
