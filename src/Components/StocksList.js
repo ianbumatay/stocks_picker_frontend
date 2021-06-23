@@ -2,6 +2,9 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import Search from './Search' 
 import {useState} from 'react'
+import StocksCss from './StocksCss'
+
+import '../App.css';
 
 const StocksList = (props) => {
     console.log(props) //stocks array of object
@@ -18,14 +21,20 @@ const StocksList = (props) => {
     return(
        <div>
            <Search handleChange={handleChange}/>
-           {filteredStocks.map( (stock) => 
-              <div key={stock.id}> 
-                 <Link to={`/stocks/${stock.id}`}> <h2>{stock.name}</h2> {stock.symbol}  </Link> 
-                 {stock.price} 
-              </div> 
-            )} 
+         
+              {filteredStocks.map( (stock) => 
+                <div key={stock.id}> <StocksCss
+                    symbol={stock.symbol}
+                    name={stock.name}
+                    price={stock.price} 
+                    id={stock.id}/>
+                </div>
+               )}
+           
        </div>
     )
 } 
 
-export default StocksList;
+export default StocksList; 
+
+//<Link to={`/stocks/${stock.id}`}> name={stock.name}</Link> 
