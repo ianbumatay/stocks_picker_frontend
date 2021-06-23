@@ -1,4 +1,4 @@
-import { bindActionCreators } from "redux";
+//import { bindActionCreators } from "redux";
 
 export default function stocksReducer (state = {stocks: []}, action ){ 
 

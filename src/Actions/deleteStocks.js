@@ -1,8 +1,8 @@
 export function deleteStocks(stockId){ 
 
-    return() => {
-        return fetch(`http://localhost:3000/api/v1/${stockId}`, {Method: "DELETE"}) 
-               .then( stock => dispatchEvent({ type: "DELETE_STOCKS", payload: stockId}))
+    return(dispatch) => {
+        return fetch(`http://localhost:3000/api/v1/stocks/${stockId}`, {method: "DELETE"}) 
+               .then( stock => dispatch({ type: "DELETE_STOCKS", payload: stockId}))
     }
 
 }
