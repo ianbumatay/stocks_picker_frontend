@@ -2,6 +2,8 @@
 import {connect} from 'react-redux'
 import {addStocks} from '../Actions/addStocks'
 import React, {Component} from 'react' 
+import 'bootstrap/dist/css/bootstrap.min.css' 
+import { Container,Col} from 'react-bootstrap'
 
 class StocksForm extends Component {
 
@@ -24,14 +26,19 @@ class StocksForm extends Component {
 
     render(){
         return(
-            <div>
+            <Container>
+                <label>Add Your Stocks!</label>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="Symbol" name="symbol" value={this.state.symbol} onChange={this.handleChange}/>
-                    <input type="text" placeholder="Name" name="name" value={this.state.name} onChange={this.handleChange}/> 
-                    <input type="text" placeholder="price" name="price" value={this.state.price} onChange={this.handleChange}/> 
-                    <input type="submit"/>
+                <label></label>
+                <Col><input type="text" placeholder="Symbol" name="symbol" value={this.state.symbol} onChange={this.handleChange}/></Col>
+                <label></label>
+                <Col><input type="text" placeholder="Name" name="name" value={this.state.name} onChange={this.handleChange}/> </Col>
+                <label></label>
+                <Col><input type="text" placeholder="Price" name="price" value={this.state.price} onChange={this.handleChange}/></Col>
+                 <label></label>
+                <Col><input type="submit"/></Col>
                 </form>
-            </div>
+            </Container>
         )
     }
 
