@@ -20,7 +20,7 @@ const Stocks = ({id, name, symbol, price}) => {
                 </Col>
                 <Col>
                   <p className="stocks-price">Price: {price}</p>
-                </Col>
+                </Col> 
             </Row>
         </Container>
     )

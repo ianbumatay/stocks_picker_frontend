@@ -19,7 +19,7 @@ class StockPage extends Component {
     render(){
         return(
             <div>
-                 <Home/>
+                 <Home exact/>
                 <Switch>
                     <Route exact path='/stocks/new' component={StocksForm} />
                     <Route exact path="/stocks/:id" render={( (routerProps) => 

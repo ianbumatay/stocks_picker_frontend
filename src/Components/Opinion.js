@@ -10,8 +10,6 @@ export default class Opinion extends Component {
     }
     
 
-   
-
      bullishCount = () => {
         this.setState( prevState => {
             return {bullishCount: prevState.bullishCount + 1}
@@ -23,8 +21,6 @@ export default class Opinion extends Component {
              return { bearishCount: prevState.bearishCount + 1}
          })
      }
-
-
 
 
     render() {

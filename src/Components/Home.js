@@ -1,12 +1,18 @@
 import React from 'react' 
+//import { Container, Card} from 'react-bootstrap'
 
-const Home = () =>{
+const Home = (props) =>{
 
     return(
         <div>
-            <h1>Stocks Wizards</h1>
+            Stocks Wizards
         </div>
     )
 }
 
-export default Home;
+Home.defaultProps = {
+    imageSrc: ''
+}
+
+export default Home; 
+

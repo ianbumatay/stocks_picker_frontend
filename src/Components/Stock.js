@@ -4,7 +4,7 @@ import {deleteStocks} from '../Actions/deleteStocks'
 import { withRouter } from 'react-router'
 import Opinion from './Opinion' 
 import 'bootstrap/dist/css/bootstrap.min.css' 
-import { Container, Row, Col, Card} from 'react-bootstrap'
+import { Container, Row, Col, Card, Button} from 'react-bootstrap'
 
 
 const Stock = (props) => { 
@@ -41,7 +41,7 @@ const Stock = (props) => {
             </Card>
             <Row>
                 <Col>
-                  <button onClick={handledelete}>Delete</button> 
+                  <Button varian="info" onClick={handledelete}>Delete</Button> 
                 </Col>
                 <Col>
                   <Opinion/>
@@ -56,7 +56,7 @@ const Stock = (props) => {
 }  
 
 Stock.defaultProps = {
-    imageSrc: 'https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/D8qa-2E/videoblocks-animated-stock-market-data-infographics-background_s1n7ugj-f_thumbnail-180_13.jpg'
+    imageSrc: 'https://t3.ftcdn.net/jpg/03/10/46/56/360_F_310465670_Wy4QCEfxYU2ziHjbeZsNAumKhaZzZS1w.jpg'
 }
 
 export default withRouter( connect(null, {deleteStocks})(Stock) );
