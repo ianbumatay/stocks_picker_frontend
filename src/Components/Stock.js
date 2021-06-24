@@ -28,19 +28,25 @@ const Stock = (props) => {
                   <p className="stocks-price">Price: {props.stock ? props.stock.price : null}</p>
                 </Col>
             </Row>
-            <Card className="'mb-3" style={{color: '#000'}}>
-                <Card.Img src={props.imageSrc} />
+            <Card className='mb-3' style={{color: '#000'}}>
+                <Card.Img src={props.imageSrc}/>
                 {/* <Card.Body>
                     <Card.Title>
-                       {props.stock ? props.stock.name : null }
+                      
                     </Card.Title>
                     <Card.Text>
-                    {props.stock ? props.stock.price : null }
+            
                     </Card.Text>
                 </Card.Body> */}
-                <button onClick={handledelete}>Delete</button> 
-                <Opinion/>
             </Card>
+            <Row>
+                <Col>
+                  <button onClick={handledelete}>Delete</button> 
+                </Col>
+                <Col>
+                  <Opinion/>
+                </Col>
+            </Row>
         </Container>
             
                
