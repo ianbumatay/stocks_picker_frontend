@@ -16,7 +16,9 @@ const Stock = (props) => {
     return(
         <div>
             <div>
-                <h2>{props.stock ? props.stock.name : null }</h2> <h4>{props.stock ? props.stock.symbol : null }</h4>  <p>{props.stock ? props.stock.price : null }</p>
+                <div><h2>{props.stock ? props.stock.name : null }</h2></div> 
+                <p>Symbol: {props.stock ? props.stock.symbol : null }</p>  
+                <p>Price: {props.stock ? props.stock.price : null }</p>
                 <div><img src={props.imageSrc} /></div>
                 <button onClick={handledelete}>Delete</button> 
                 <Opinion/>

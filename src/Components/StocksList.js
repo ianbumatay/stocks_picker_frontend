@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import Search from './Search' 
 import {useState} from 'react'
-import StocksCss from './StocksCss'
+import Stocks from './Stocks'
 
 import '../App.css';
 
@@ -23,7 +23,7 @@ const StocksList = (props) => {
            <Search handleChange={handleChange}/>
          
               {filteredStocks.map( (stock) => 
-                <div key={stock.id}> <StocksCss
+                <div key={stock.id}> <Stocks
                     symbol={stock.symbol}
                     name={stock.name}
                     price={stock.price} 
