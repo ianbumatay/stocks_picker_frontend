@@ -13,24 +13,15 @@ const Stocks = ({id, name, symbol, price}) => {
         <Container>
             <Row>
                 <Col>
-                <Link to={`/stocks/${id}`}> {name}</Link> 
+                  <p className="stocks-symbol">{symbol}</p>
                 </Col>
-
-            
-        
                 <Col>
-                 <p className="stocks-symbol">{symbol}</p>
+                  <h4><Link to={`/stocks/${id}`}> {name}</Link> </h4>
                 </Col>
-
-        
-            
                 <Col>
-                <p className="stocks-price">{price}</p>
+                  <p className="stocks-price">Price: {price}</p>
                 </Col>
-
             </Row>
-            
-        
         </Container>
     )
 }

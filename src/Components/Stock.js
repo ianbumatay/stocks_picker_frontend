@@ -2,7 +2,9 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {deleteStocks} from '../Actions/deleteStocks'
 import { withRouter } from 'react-router'
-import Opinion from './Opinion'
+import Opinion from './Opinion' 
+import 'bootstrap/dist/css/bootstrap.min.css' 
+import { Container, Row, Col, Card} from 'react-bootstrap'
 
 
 const Stock = (props) => { 
@@ -14,16 +16,25 @@ const Stock = (props) => {
     }
 
     return(
-        <div>
-            <div>
-                <div><h2>{props.stock ? props.stock.name : null }</h2></div> 
-                <p>Symbol: {props.stock ? props.stock.symbol : null }</p>  
-                <p>Price: {props.stock ? props.stock.price : null }</p>
-                <div><img src={props.imageSrc} /></div>
+        <Container> 
+            <Card>
+                <Card.Img src={props.imageSrc} alt={props.stock.name}/>
+                <Card.Body>
+                    <Card.Title>
+                       {props.stock ? props.stock.name : null }
+                    </Card.Title>
+                    <Card.Text>
+                    {props.stock ? props.stock.price : null }
+                    </Card.Text>
+                </Card.Body>
                 <button onClick={handledelete}>Delete</button> 
                 <Opinion/>
-            </div> 
-        </div>
+            </Card>
+        </Container>
+            
+               
+           
+       
     )
 }  
 
