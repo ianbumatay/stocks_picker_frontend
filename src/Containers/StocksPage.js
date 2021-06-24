@@ -7,6 +7,7 @@ import Stock from '../Components/Stock'
 import StocksForm from '../Components/StocksForm'
 import StocksList from '../Components/StocksList'
 import React,{Component} from 'react' 
+import NavBar from '../Components/NavBar'
 
 
 class StockPage extends Component { 
@@ -19,7 +20,8 @@ class StockPage extends Component {
     render(){
         return(
             <div>
-                 <Home exact/>
+                <NavBar/>
+                 <Home exact path="/" component={Home}/>
                 <Switch>
                     <Route exact path='/stocks/new' component={StocksForm} />
                     <Route exact path="/stocks/:id" render={( (routerProps) => 

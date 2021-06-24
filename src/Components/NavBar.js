@@ -5,8 +5,12 @@ const NavBar = () => {
 
     return(
         <div>
-            <NavLink ></NavLink>
-
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/stocks">Stocks</NavLink> 
+            <NavLink to="/stocks/;id"> Stock</NavLink>
+            <NavLink to="/stocks/new">Create</NavLink>
         </div>
     )
-}
+} 
+
+export default NavBar;
