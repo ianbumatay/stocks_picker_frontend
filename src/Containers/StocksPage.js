@@ -21,8 +21,8 @@ class StockPage extends Component {
         return(
             <div>
                 <NavBar/>
-                 <Home exact path="/" component={Home}/>
                 <Switch>
+                    <Route exact path="/" component={Home}/>
                     <Route exact path='/stocks/new' component={StocksForm} />
                     <Route exact path="/stocks/:id" render={( (routerProps) => 
                         <Stock stock={this.props.stocks.find( stock => stock.id === parseInt(routerProps.match.params.id) )} /> )}
