@@ -19,7 +19,7 @@ const StocksList = (props) => {
 
     return(
        <div>
-           <Search handleChange={handleChange}/>
+           <Search handleChange={handleChange}/><br></br><br></br>
          
               {filteredStocks.map( (stock) => 
                 <div key={stock.id}> 

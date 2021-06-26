@@ -5,7 +5,7 @@ const Home = (props) =>{
 
     return(
         <div>
-            Stocks Wizards
+            <h1>Stocks Picker</h1>
         </div>
     )
 }

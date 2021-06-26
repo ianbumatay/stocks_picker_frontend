@@ -28,10 +28,10 @@ export default class Opinion extends Component {
            <Container> 
               <Row>
                  <Col>
-                   <Button variant="success" onClick={this.bullishCount}>Bullish: {this.state.bullishCount}</Button>
+                   <Button variant="success" onClick={this.bullishCount}>Bullish: <h2>{this.state.bullishCount}</h2></Button>
                  </Col>
                 <Col>
-                   <Button variant="danger" onClick={this.bearishCount}>Bearish: {this.state.bearishCount}</Button>
+                   <Button variant="danger" onClick={this.bearishCount}>Bearish: <h2>{this.state.bearishCount}</h2></Button>
                 </Col>
               </Row>
           </Container>

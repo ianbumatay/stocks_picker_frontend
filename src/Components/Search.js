@@ -6,7 +6,7 @@ const Search = ({handleChange}) => {
 
     return(
         <div>
-            <input type="text" placeholder="search..."  onChange={handleChange}/>
+            <input type="text" placeholder="Search..."  onChange={handleChange}/>
         </div>
     )
 } 

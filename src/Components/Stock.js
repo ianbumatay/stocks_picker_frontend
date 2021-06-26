@@ -30,23 +30,20 @@ const Stock = (props) => {
             </Row>
             <Card className='mb-3' style={{color: '#000'}}>
                 <Card.Img src={props.imageSrc}/>
-                {/* <Card.Body>
+                <Card.Body>
                     <Card.Title>
                       
                     </Card.Title>
-                    <Card.Text>
-            
-                    </Card.Text>
-                </Card.Body> */}
-            </Card>
-            <Row>
-                <Col>
-                  <Button varian="info" onClick={handledelete}>Delete</Button> 
-                </Col>
-                <Col>
-                  <Opinion/>
-                </Col>
-            </Row>
+                      <Row>
+                         <Col>
+                            <Button varian="info" onClick={handledelete}>Delete</Button> 
+                         </Col>
+                         <Col>
+                            <Opinion/>
+                          </Col>
+                        </Row>
+                    </Card.Body>
+             </Card>
         </Container>
             
                

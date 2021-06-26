@@ -20,7 +20,7 @@ class StockPage extends Component {
     render(){
         return(
             <div>
-                <NavBar/>
+                <NavBar/><br></br><br></br>
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route exact path='/stocks/new' component={StocksForm} />
