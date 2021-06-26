@@ -9,7 +9,7 @@ const NavBar = () => {
         margin: '0 6px 6px',
         textDecoration: 'none',
         color:'white', 
-        background: 'bluegreen',
+        background: 'blue',
     }
 
     return(

@@ -27,12 +27,13 @@ export default class Opinion extends Component {
         return (
            <Container> 
               <Row>
-                 <Col>
-                   <Button variant="success" onClick={this.bullishCount}>Bullish: <h2>{this.state.bullishCount}</h2></Button>
-                 </Col>
-                <Col>
-                   <Button variant="danger" onClick={this.bearishCount}>Bearish: <h2>{this.state.bearishCount}</h2></Button>
-                </Col>
+              <Col>
+                <Button variant="danger" onClick={this.bearishCount}>BULLISH <h2>{this.state.bearishCount}</h2></Button>
+             </Col>
+              <Col>
+                <Button variant="success" onClick={this.bullishCount}>BEARISH <h2>{this.state.bullishCount}</h2></Button>
+              </Col>
+               
               </Row>
           </Container>
         )
