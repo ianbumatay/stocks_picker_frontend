@@ -7,7 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Row, Col, Card, Button} from 'react-bootstrap'
 
 
-const Stock = (props) => { 
+const Stock = (props) => {  
+
+    console.log(props)
 
 
     const handledelete = () => {
@@ -22,7 +24,7 @@ const Stock = (props) => {
                   <p className="stocks-symbol">{props.stock ? props.stock.symbol : null}</p>
                 </Col>
                 <Col>
-                <p className="stocks-symbol">{props.stock ? props.stock.name : null}</p>
+                <p className="stocks-symbol"><h4>{props.stock ? props.stock.name : null}</h4></p>
                 </Col>
                 <Col>
                   <p className="stocks-price">Price: {props.stock ? props.stock.price : null}</p>
