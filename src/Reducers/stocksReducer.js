@@ -1,6 +1,7 @@
 //import { bindActionCreators } from "redux";
 
 export default function stocksReducer (state = {stocks: []}, action ){ 
+    
 
     switch(action.type){ 
 
@@ -14,10 +15,8 @@ export default function stocksReducer (state = {stocks: []}, action ){
             } 
 
         case 'DELETE_STOCKS':
-            const filteredId = state.stocks.filter( stock => stock.id !== action.payload) 
-
+            const filteredId = state.stocks.filter( stock => stock.id !== action.payload)
             return { stocks: filteredId}
-
 
 
         default:

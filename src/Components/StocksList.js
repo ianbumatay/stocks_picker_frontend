@@ -23,12 +23,7 @@ const StocksList = (props) => {
          
               {filteredStocks.map( (stock) => 
                 <div key={stock.id}> 
-                    <Stocks
-                        symbol={stock.symbol}
-                        name={stock.name}
-                        price={stock.price} 
-                        id={stock.id}
-                    />
+                    <Stocks symbol={stock.symbol} name={stock.name} price={stock.price} id={stock.id}/>
                 </div>
                )}
            

@@ -13,6 +13,7 @@ const Stock = (props) => {
 
 
     const handledelete = () => {
+        //console.log(props)
         props.deleteStocks(props.stock.id)
         props.history.push('/stocks')
     }
@@ -24,7 +25,7 @@ const Stock = (props) => {
                   <p className="stocks-symbol">{props.stock ? props.stock.symbol : null}</p>
                 </Col>
                 <Col>
-                <p className="stocks-symbol"><h4>{props.stock ? props.stock.name : null}</h4></p>
+                <h4 className="stocks-symbol">{props.stock ? props.stock.name : null}</h4>
                 </Col>
                 <Col>
                   <p className="stocks-price">Price: {props.stock ? props.stock.price : null}</p>
