@@ -9,9 +9,6 @@ import { Container, Row, Col, Card, Button} from 'react-bootstrap'
 
 const Stock = (props) => {  
 
-    console.log(props)
-
-
     const handledelete = () => {
         //console.log(props)
         props.deleteStocks(props.stock.id)
@@ -48,9 +45,7 @@ const Stock = (props) => {
                     </Card.Body>
              </Card>
         </Container>
-            
-               
-           
+                   
        
     )
 }  

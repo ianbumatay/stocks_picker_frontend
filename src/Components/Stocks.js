@@ -1,5 +1,4 @@
 import React from 'react' 
-// import '../App.css';
 import '../Stocks.css'
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css' 
@@ -28,4 +27,4 @@ const Stocks = ({id, name, symbol, price}) => {
 
 export default Stocks; 
 
-//<Link to={`/stocks/${stock.id}`}> {name}</Link> 
+

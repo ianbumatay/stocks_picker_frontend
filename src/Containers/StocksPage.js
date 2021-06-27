@@ -13,7 +13,6 @@ import NavBar from '../Components/NavBar'
 class StockPage extends Component { 
 
     componentDidMount(){
-        console.log(this)
        this.props.fetchStocks()
     }
 
