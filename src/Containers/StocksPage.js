@@ -21,8 +21,14 @@ class StockPage extends Component {
         //  console.log(stock) 
         this.setState( prevState => {
             return {favorites: [...prevState.favorites, stock]}
+        }) 
+    } 
+
+    deleteFavFucntion = (stock) => {
+        const filtered = this.state.favorites.filter( fav => fav !== stock)
+        this.setState( prevState => {
+            return {favorites: filtered}
         })
-       
     }
 
     componentDidMount(){
@@ -44,7 +50,7 @@ class StockPage extends Component {
                         <Stocks stocks={this.props.stocks} favFunction={this.favFunction}/>
                     </Route>
                 </Switch>
-                <Fav favorites={this.state.favorites} />
+                <Fav favorites={this.state.favorites} deleteFavFucntion={this.deleteFavFucntion}/>
             </div>
         )
     }

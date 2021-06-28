@@ -6,21 +6,20 @@ import { Container, Row, Col} from 'react-bootstrap'
 const Stock = (props) => { 
   console.log(props)
  
-
   
-
-  // const clickFav = () => {
-  //   props.favFunction()
-  // }
-
-    
+      
 
     return (
       <div>
         <Container>
             <Row>
                 <Col>
-                 <button onClick={() => props.favFunction(props.stock)}>fav</button>
+                <button onClick={() => props.favFunction(props.stock)}> Trade </button> 
+      
+                </Col> 
+                <button onClick={() => props.deleteFavFucntion(props.stock)}>WORKING</button>
+                <Col>
+                 
                </Col>
                 <Col>
                   <p className="stocks-symbol">{props.stock.symbol}</p>

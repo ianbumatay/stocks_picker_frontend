@@ -9,7 +9,7 @@ const Fav = (props) => {
     return (
         <div>
            <h1>Portfolio</h1>
-           {props.favorites.map( fav =>  <Stock stock={fav}/>)}
+           {props.favorites.map( fav =>  <Stock stock={fav} deleteFavFucntion={props.deleteFavFucntion}/>)}
   
         </div>
     )
