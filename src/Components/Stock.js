@@ -6,6 +6,14 @@ import { Container, Row, Col} from 'react-bootstrap'
 const Stock = (props) => { 
   console.log(props)
  
+
+  const renderButtons = () => {
+    if(props.buy){
+      return (<button onClick={() => props.buy(props.stock)}> Buy </button> )
+    }else {
+       return (<button onClick={() => props.sell(props.stock)}>Sell</button>)
+    }
+  }
   
       
 
@@ -14,10 +22,7 @@ const Stock = (props) => {
         <Container>
             <Row>
                 <Col>
-                <button onClick={() => props.buy(props.stock)}> Buy </button> 
-                </Col> 
-                <Col>
-                <button onClick={() => props.sell(props.stock)}>Sell</button>
+                  {renderButtons()}
                </Col>
                 <Col>
                   <p className="stocks-symbol">{props.stock.symbol}</p>
