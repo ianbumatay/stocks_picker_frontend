@@ -30,19 +30,7 @@ class StockPage extends Component {
           })
         }
     }
-    //  favFunction = (stock) => {
-    //     //  console.log(stock) 
-    //     this.setState( prevState => {
-    //         return {favorites: [...prevState.favorites, stock]}
-    //     }) 
-    // } 
-
-    // deleteFavFucntion = (stock) => {
-    //     const filtered = this.state.favorites.filter( fav => fav !== stock)
-    //     this.setState( prevState => {
-    //         return {favorites: filtered}
-    //     })
-    // }
+    
 
     componentDidMount(){
        this.props.fetchStocks()
@@ -60,10 +48,10 @@ class StockPage extends Component {
                         <StockShow stock={this.props.stocks.find( stock => stock.id === parseInt(routerProps.match.params.id) )} /> )}
                     /> 
                      <Route exact path='/stocks'>
-                        <Stocks stocks={this.props.stocks} favFunction={this.stocksPicker}/>
+                        <Stocks stocks={this.props.stocks} buy={this.stocksPicker}/>
                     </Route>
                 </Switch>
-                <Fav favorites={this.state.favorites} deleteFavFucntion={this.stocksPicker}/>
+                <Fav favorites={this.state.favorites} sell={this.stocksPicker}/>
             </div>
         )
     }

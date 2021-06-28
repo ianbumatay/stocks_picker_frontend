@@ -27,7 +27,7 @@ class Stocks extends Component{
         return(
             <div>
                 <Search handleChange={this.handleChange}/><br></br><br></br>
-                {filteredStocks.map((stock) => <div key={stock.id}> <Stock stock={stock} favFunction={this.props.favFunction}/> </div> )}  
+                {filteredStocks.map((stock) => <div key={stock.id}> <Stock stock={stock} buy={this.props.buy}/> </div> )}  
             </div>
         )
     }

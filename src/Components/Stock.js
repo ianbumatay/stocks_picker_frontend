@@ -14,12 +14,10 @@ const Stock = (props) => {
         <Container>
             <Row>
                 <Col>
-                <button onClick={() => props.favFunction(props.stock)}> Trade </button> 
-      
+                <button onClick={() => props.buy(props.stock)}> Buy </button> 
                 </Col> 
-                <button onClick={() => props.deleteFavFucntion(props.stock)}>WORKING</button>
                 <Col>
-                 
+                <button onClick={() => props.sell(props.stock)}>Sell</button>
                </Col>
                 <Col>
                   <p className="stocks-symbol">{props.stock.symbol}</p>
