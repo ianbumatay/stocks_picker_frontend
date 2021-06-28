@@ -5,7 +5,7 @@ import { fetchStocks } from '../Actions/fetchStocks'
 import Home from '../Components/Home'
 import StockShow from '../Components/StockShow'
 import StocksForm from '../Components/StocksForm'
-import StocksList from '../Components/StocksList'
+import Stocks from '../Components/Stocks'
 import React,{Component} from 'react' 
 import NavBar from '../Components/NavBar'
 import Fav from '../Components/Fav'
@@ -38,7 +38,7 @@ class StockPage extends Component {
                         <StockShow stock={this.props.stocks.find( stock => stock.id === parseInt(routerProps.match.params.id) )} /> )}
                     /> 
                      <Route exact path='/stocks'>
-                        <StocksList stocksList={this.props.stocks} favFunction={this.favFunction}/>
+                        <Stocks stocks={this.props.stocks} favFunction={this.favFunction}/>
                     </Route>
                 </Switch>
                 <Fav favorites={this.state.favorites} />

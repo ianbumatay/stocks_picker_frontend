@@ -1,45 +1,38 @@
-import React from 'react' 
-import { Link } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css' 
-import { Container, Row, Col} from 'react-bootstrap'
 
-const Stocks = ({id, name, symbol, price}) => { 
-  //console.log(props)
- 
+import Search from './Search' 
+import Stock from './Stock'
+import React,{Component} from 'react' 
+import '../App.css';
+
+class Stocks extends Component{
+    
+     
+    state = {
+         search: '',
+    }
 
   
+    handleChange = (e) => {
+        this.setState({
+            search: e.target.value
+        })
+    }  
 
-  // const clickFav = () => {
-  //   console.log("clicked")
-  // }
+   
 
-    
+    render(){ 
+        console.log(this.props)// favFunction /stocksList array or objects
+        const filteredStocks = this.props.stocks.filter( stock => (stock.name.toLowerCase().includes(this.state.search.toLowerCase()))) 
 
-    return (
-      <div>
-        <Container>
-            <Row>
-                <Col>
-                 <button>fav</button>
-               </Col>
-                <Col>
-                  <p className="stocks-symbol">{symbol}</p>
-                </Col>
-                <Col>
-                  <h4><Link to={`/stocks/${id}`}> {name}</Link> </h4>
-                </Col>
-                <Col>
-                  <p className="stocks-price">Price: {price}</p>
-                </Col> 
-            </Row>
-        </Container>
-      </div>
-    )
-}
+        return(
+            <div>
+                <Search handleChange={this.handleChange}/><br></br><br></br>
+                {filteredStocks.map((stock) => <div key={stock.id}> <Stock stock={stock}/> </div> )}  
+            </div>
+        )
+    }
+} 
 
 export default Stocks; 
 
-
-// <Link to={`/boards/${board.id}`}> {board.name}  </Link></h2>)}
-
-// {id, name, symbol, price, clickFav}
+// symbol={stock.symbol} name={stock.name} price={stock.price} id={stock.id}
