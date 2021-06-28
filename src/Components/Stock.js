@@ -4,13 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Row, Col} from 'react-bootstrap'
 
 const Stock = (props) => { 
-  //console.log(props)
+  console.log(props)
  
 
   
 
   // const clickFav = () => {
-  //   console.log("clicked")
+  //   props.favFunction()
   // }
 
     
@@ -20,7 +20,7 @@ const Stock = (props) => {
         <Container>
             <Row>
                 <Col>
-                 <button>fav</button>
+                 <button onClick={() => props.favFunction(props.stock)}>fav</button>
                </Col>
                 <Col>
                   <p className="stocks-symbol">{props.stock.symbol}</p>

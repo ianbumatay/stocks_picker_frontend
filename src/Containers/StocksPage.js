@@ -17,8 +17,11 @@ class StockPage extends Component {
         favorites: []
     } 
 
-     favFunction = () => {
-         console.log(this.props.stocks)
+     favFunction = (stock) => {
+        //  console.log(stock) 
+        this.setState( prevState => {
+            return {favorites: [...prevState.favorites, stock]}
+        })
        
     }
 

@@ -21,13 +21,13 @@ class Stocks extends Component{
    
 
     render(){ 
-        console.log(this.props)// favFunction /stocksList array or objects
+        console.log(this.props)// favFunction /stocks array or objects
         const filteredStocks = this.props.stocks.filter( stock => (stock.name.toLowerCase().includes(this.state.search.toLowerCase()))) 
 
         return(
             <div>
                 <Search handleChange={this.handleChange}/><br></br><br></br>
-                {filteredStocks.map((stock) => <div key={stock.id}> <Stock stock={stock}/> </div> )}  
+                {filteredStocks.map((stock) => <div key={stock.id}> <Stock stock={stock} favFunction={this.props.favFunction}/> </div> )}  
             </div>
         )
     }

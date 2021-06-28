@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Stocks from './Stock'
+import Stock from './Stock'
 
 
 const Fav = (props) => { 
@@ -9,7 +9,7 @@ const Fav = (props) => {
     return (
         <div>
            <h1>Portfolio</h1>
-           {props.favorites.map( fav =>  <Stocks symbol={fav} name={fav} price={fav} id={fav}/>)}
+           {props.favorites.map( fav =>  <Stock stock={fav}/>)}
   
         </div>
     )
