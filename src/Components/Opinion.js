@@ -21,7 +21,7 @@ class Opinion extends Component{
               <Row>
                 <Col><h4>Market Strategy</h4></Col>
                 <Col>
-                   <button onClick={this.handleClick}>{this.state.toggled ? <Button variant="danger">BEARISH</Button> : <Button variant="success">BULLISH</Button> }</button>
+                   <div onClick={this.handleClick}>{ this.state.toggled ? <Button variant="danger">BEARISH</Button> : <Button variant="success">BULLISH</Button>}</div>
                 </Col>
              </Row>
           </Container>
