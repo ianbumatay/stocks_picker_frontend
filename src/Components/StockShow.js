@@ -7,10 +7,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Row, Col, Card, Button} from 'react-bootstrap'
 
 
-const Stock = (props) => {  
+const StockShow = (props) => {  
+  console.log(props)
 
     const handledelete = () => {
-        //console.log(props)
         props.deleteStocks(props.stock.id)
         props.history.push('/stocks')
     }
@@ -25,7 +25,7 @@ const Stock = (props) => {
                 <h4 className="stocks-symbol">{props.stock ? props.stock.name : null}</h4>
                 </Col>
                 <Col>
-                  <p className="stocks-price">Price: {props.stock ? props.stock.price : null}</p>
+                  <p className="stocks-price">Price:{props.stock ? props.stock.price : null}</p>
                 </Col>
             </Row>
             <Card className='mb-3' style={{color: '#000'}}>
@@ -50,8 +50,8 @@ const Stock = (props) => {
     )
 }  
 
-Stock.defaultProps = {
+StockShow.defaultProps = {
     imageSrc: 'https://t3.ftcdn.net/jpg/03/10/46/56/360_F_310465670_Wy4QCEfxYU2ziHjbeZsNAumKhaZzZS1w.jpg'
 }
 
-export default withRouter( connect(null, {deleteStocks})(Stock) );
+export default withRouter( connect(null, {deleteStocks})(StockShow) );
