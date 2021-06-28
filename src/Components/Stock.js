@@ -1,7 +1,7 @@
 import React from 'react' 
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css' 
-import { Container, Row, Col} from 'react-bootstrap'
+import { Container, Row, Col, Button} from 'react-bootstrap'
 
 const Stock = (props) => { 
   console.log(props)
@@ -9,9 +9,9 @@ const Stock = (props) => {
 
   const renderButtons = () => {
     if(props.buy){
-      return (<button onClick={() => props.buy(props.stock)}> Buy </button> )
+      return (<Button variant="success" onClick={() => props.buy(props.stock)}> Buy </Button> )
     }else {
-       return (<button onClick={() => props.sell(props.stock)}>Sell</button>)
+       return (<Button variant="danger" onClick={() => props.sell(props.stock)}>Sell</Button>)
     }
   }
   

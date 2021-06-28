@@ -50,8 +50,8 @@ class StockPage extends Component {
                      <Route exact path='/stocks'>
                         <Stocks stocks={this.props.stocks} buy={this.stocksPicker}/>
                     </Route>
+                        <Fav favorites={this.state.favorites} sell={this.stocksPicker}/>
                 </Switch>
-                <Fav favorites={this.state.favorites} sell={this.stocksPicker}/>
             </div>
         )
     }
