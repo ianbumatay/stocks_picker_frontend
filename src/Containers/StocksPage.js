@@ -17,19 +17,32 @@ class StockPage extends Component {
         favorites: []
     } 
 
-     favFunction = (stock) => {
-        //  console.log(stock) 
-        this.setState( prevState => {
-            return {favorites: [...prevState.favorites, stock]}
-        }) 
-    } 
-
-    deleteFavFucntion = (stock) => {
-        const filtered = this.state.favorites.filter( fav => fav !== stock)
-        this.setState( prevState => {
-            return {favorites: filtered}
-        })
+    stocksPicker = (stock) => {
+        const findStocks = this.state.favorites.find( fav => fav === stock )
+        if(!findStocks){
+            this.setState( prevState => {
+                return {favorites: [...prevState.favorites, stock]}
+            }) 
+        } else {
+          const filtered = this.state.favorites.filter( fav => fav !== stock)
+            this.setState( prevState => {
+              return {favorites: filtered}
+          })
+        }
     }
+    //  favFunction = (stock) => {
+    //     //  console.log(stock) 
+    //     this.setState( prevState => {
+    //         return {favorites: [...prevState.favorites, stock]}
+    //     }) 
+    // } 
+
+    // deleteFavFucntion = (stock) => {
+    //     const filtered = this.state.favorites.filter( fav => fav !== stock)
+    //     this.setState( prevState => {
+    //         return {favorites: filtered}
+    //     })
+    // }
 
     componentDidMount(){
        this.props.fetchStocks()
@@ -47,10 +60,10 @@ class StockPage extends Component {
                         <StockShow stock={this.props.stocks.find( stock => stock.id === parseInt(routerProps.match.params.id) )} /> )}
                     /> 
                      <Route exact path='/stocks'>
-                        <Stocks stocks={this.props.stocks} favFunction={this.favFunction}/>
+                        <Stocks stocks={this.props.stocks} favFunction={this.stocksPicker}/>
                     </Route>
                 </Switch>
-                <Fav favorites={this.state.favorites} deleteFavFucntion={this.deleteFavFucntion}/>
+                <Fav favorites={this.state.favorites} deleteFavFucntion={this.stocksPicker}/>
             </div>
         )
     }
