@@ -21,7 +21,6 @@ class Stocks extends Component{
    
 
     render(){ 
-        console.log(this.props)// favFunction /stocks array or objects
         const filteredStocks = this.props.stocks.filter( stock => (stock.name.toLowerCase().includes(this.state.search.toLowerCase()))) 
 
         return(

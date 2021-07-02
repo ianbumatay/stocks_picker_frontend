@@ -4,7 +4,6 @@ import Stock from './Stock'
 
 
 const Fav = (props) => { 
-    console.log(props)
 
     return (
         <div>

@@ -8,7 +8,6 @@ import { Container, Row, Col, Card, Button} from 'react-bootstrap'
 
 
 const StockShow = (props) => {  
-  console.log(props)
 
     const handledelete = () => {
         props.deleteStocks(props.stock.id)

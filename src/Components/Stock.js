@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css' 
 import { Container, Row, Col, Button} from 'react-bootstrap'
 
+
 const Stock = (props) => { 
-  console.log(props)
  
 
   const renderButtons = () => {
     if(props.buy){
-      return (<Button variant="success" onClick={() => props.buy(props.stock)}> Buy </Button> )
+      return (<Button variant="success" onClick={() => props.buy(props.stock)}>Buy </Button>)
     }else {
-       return (<Button variant="danger" onClick={() => props.sell(props.stock)}>Sell</Button>)
+      return (<Button variant="danger" onClick={() => props.sell(props.stock)}>Sell</Button>)
     }
   }
   
@@ -41,7 +41,3 @@ const Stock = (props) => {
 
 export default Stock; 
 
-
-// <Link to={`/boards/${board.id}`}> {board.name}  </Link></h2>)}
-
-// {id, name, symbol, price, clickFav}
