@@ -25,11 +25,10 @@ class StockPage extends Component {
             }) 
         } else {
           const filtered = this.state.favorites.filter( fav => fav !== stock)
-            this.setState( prevState => {
-              return {favorites: filtered}
-          })
+            this.setState({favorites: filtered})
         }
-    }
+    } 
+
     
 
     componentDidMount(){
