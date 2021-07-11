@@ -1,8 +1,7 @@
-//import { bindActionCreators } from "redux";
 
-export default function stocksReducer (state = {stocks: []}, action ){ 
-    
+export default function stocksReducer (state = {stocks: []}, action ){  
 
+   
     switch(action.type){ 
 
         case 'FETCH_STOCKS':

@@ -3,7 +3,8 @@ import {connect} from 'react-redux'
 import {addStocks} from '../Actions/addStocks'
 import React, {Component} from 'react' 
 import 'bootstrap/dist/css/bootstrap.min.css' 
-import { Container,Col} from 'react-bootstrap'
+import { Container,Col} from 'react-bootstrap' 
+import { withRouter } from 'react-router'
 
 class StocksForm extends Component {
 
@@ -44,4 +45,4 @@ class StocksForm extends Component {
 
 } 
 
-export default connect(null, {addStocks})(StocksForm);
+export default withRouter( connect(null, {addStocks})(StocksForm) );

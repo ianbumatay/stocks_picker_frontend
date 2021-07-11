@@ -34,4 +34,3 @@ class Stocks extends Component{
 
 export default Stocks; 
 
-// symbol={stock.symbol} name={stock.name} price={stock.price} id={stock.id}

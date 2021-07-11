@@ -13,6 +13,7 @@ import Fav from '../Components/Fav'
 
 class StockPage extends Component {  
 
+
     state ={
         favorites: []
     } 
@@ -31,12 +32,11 @@ class StockPage extends Component {
 
     
 
-    componentDidMount(){
-       this.props.fetchStocks()
+    componentDidMount(){  
+       this.props.fetchStocks()  
     }
 
     render(){
-        
         return(
             <div>
                 <NavBar/><br></br><br></br>

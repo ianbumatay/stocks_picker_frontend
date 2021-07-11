@@ -7,14 +7,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Row, Col, Card, Button} from 'react-bootstrap'
 
 
-const StockShow = (props) => {  
+const StockShow = (props) => { 
 
     const handledelete = () => {
         props.deleteStocks(props.stock.id)
         props.history.push('/stocks')
     }
 
-    return(
+    return( 
         <Container> 
             <Row>
                 <Col>
